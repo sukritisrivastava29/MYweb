@@ -48,3 +48,8 @@ section{
 button{
   cursor:pointer;
 }
+@media (pointer: fine) {
+  * {
+    cursor: none;
+  }
+}
