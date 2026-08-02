@@ -11,8 +11,8 @@ import Cursor from "./components/Cursor";
 function App() {
   return (
     <>
-      <Background />
- <Cursor />
+    <Background />
+      <Cursor />
       <Navbar />
 
       <Hero />

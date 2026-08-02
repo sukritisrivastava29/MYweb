@@ -2,31 +2,46 @@ import { motion } from "framer-motion";
 
 const projects = [
   {
-    title: "CodeForgeAI",
-    description:
-      "An AI-powered coding platform with an online compiler, authentication, coding history, and an intelligent coding assistant.",
-    tech: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
-    image: "/projects/codeforgeai.png",
-    github: "https://github.com/yourusername/codeforgeai",
-    live: "#",
-  },
-  {
     title: "FinanceOS",
     description:
-      "A personal finance tracker featuring expense management, analytics dashboard, receipt scanning, and AI-powered financial insights.",
-    tech: ["React", "Express", "MongoDB", "Chart.js"],
+      "A full-stack personal finance tracker with secure authentication, expense management, analytics dashboard, receipt scanning, and AI-powered financial insights.",
+    tech: [
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Tailwind CSS",
+    ],
     image: "/projects/financeos.png",
-    github: "https://github.com/yourusername/financeos",
-    live: "#",
+    github: "YOUR_GITHUB_LINK",
+    live: "YOUR_LIVE_LINK",
   },
   {
     title: "Triply AI",
     description:
-      "An AI travel planner that generates personalized itineraries based on budget, destination, and travel preferences.",
-    tech: ["React", "Gemini API", "Tailwind CSS"],
+      "An AI-powered travel planner that creates personalized itineraries based on destination, budget, and travel preferences using the Gemini API.",
+    tech: [
+      "React",
+      "Tailwind CSS",
+      "Gemini API",
+    ],
     image: "/projects/triply.png",
-    github: "https://github.com/yourusername/triply",
-    live: "#",
+    github: "YOUR_GITHUB_LINK",
+    live: "YOUR_LIVE_LINK",
+  },
+  {
+    title: "Weather Dashboard",
+    description:
+      "A responsive weather application that provides real-time weather conditions, forecasts, and location-based search using external APIs.",
+    tech: [
+      "React",
+      "JavaScript",
+      "OpenWeather API",
+      "CSS",
+    ],
+    image: "/projects/weather.png",
+    github: "YOUR_GITHUB_LINK",
+    live: "YOUR_LIVE_LINK",
   },
 ];
 
