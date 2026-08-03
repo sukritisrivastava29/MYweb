@@ -1,114 +1,115 @@
 import { motion } from "framer-motion";
 
-const stats = [
-  {
-    number: "10+",
-    label: "Projects Built",
-  },
-  {
-    number: "50+",
-    label: "LeetCode Problems",
-  },
-  {
-    number: "2027",
-    label: "Graduation Year",
-  },
-  {
-    number: "MERN",
-    label: "Primary Stack",
-  },
-];
-
 function About() {
   return (
     <section
       id="about"
-      className="bg-[#141414] text-white py-32"
+      className="min-h-screen bg-white flex items-center py-24"
     >
-      <div className="max-w-[1300px] mx-auto px-6 lg:px-12">
+      <div className="max-w-7xl mx-auto px-8 lg:px-16 w-full">
 
-        <div className="grid lg:grid-cols-2 gap-20 items-center">
+        <div className="grid lg:grid-cols-2 gap-24 items-center">
 
-          
+          {/* Illustration */}
 
           <motion.div
             initial={{ opacity: 0, x: -60 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
+            transition={{ duration: 0.8 }}
+            className="relative flex justify-center"
           >
+            {/* Decorative dots */}
 
-            <p className="uppercase tracking-[5px] text-[#E66A1F] font-semibold">
-              About Me
-            </p>
+            <span className="absolute top-8 left-8 w-3 h-3 rounded-full bg-orange-500"></span>
+            <span className="absolute bottom-8 right-8 w-2 h-2 rounded-full bg-orange-500"></span>
+            <span className="absolute top-1/2 right-4 w-4 h-4 rounded-full bg-orange-500"></span>
 
-            <h2 className="mt-5 text-5xl md:text-7xl font-bold leading-none">
-              Creating
-              <br />
-              software that
-              <br />
-              matters.
-            </h2>
-
-            <p className="mt-10 text-lg leading-9 text-neutral-300">
-              I'm Sukriti Srivastava, an Electronics & Communication Engineering
-              student passionate about full-stack development and AI-powered
-              applications. I enjoy turning ideas into products that are fast,
-              scalable, and easy to use.
-            </p>
-
-            <p className="mt-6 text-lg leading-9 text-neutral-300">
-              My journey started with curiosity about how websites work, and it
-              has grown into building complete MERN applications, solving Data
-              Structures & Algorithms problems, and continuously learning modern
-              technologies to become a better software engineer.
-            </p>
-
+            <img
+              src="/illustrations/about.png"
+              alt="About Illustration"
+              className="w-full max-w-[520px] object-contain"
+            />
           </motion.div>
 
-         
+          {/* Content */}
 
           <motion.div
             initial={{ opacity: 0, x: 60 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
+            transition={{ duration: 0.8 }}
           >
 
-            <div className="grid grid-cols-2 gap-6">
+            <p className="uppercase tracking-[6px] text-orange-500 text-sm mb-4">
+              About
+            </p>
 
-              {stats.map((item) => (
-                <div
-                  key={item.label}
-                  className="border border-neutral-700 p-8"
-                >
-                  <h3 className="text-5xl font-bold text-[#E66A1F]">
-                    {item.number}
-                  </h3>
+            <h2 className="text-5xl lg:text-7xl font-black leading-none text-black">
+              Building.
+              <br />
+              Learning.
+            </h2>
 
-                  <p className="mt-4 uppercase tracking-[3px] text-sm text-neutral-400">
-                    {item.label}
-                  </p>
-                </div>
-              ))}
+            <div className="w-24 h-[2px] bg-orange-500 my-8"></div>
 
-            </div>
+            <p className="text-gray-600 text-lg leading-9 max-w-xl">
+              I'm a software engineering student who enjoys building digital
+              products that are simple, reliable, and purposeful. My interests
+              span full-stack development, AI-powered applications, and creating
+              experiences that balance thoughtful design with solid engineering.
+            </p>
 
-            <div className="mt-12 border border-neutral-700 p-8">
+            <p className="text-gray-600 text-lg leading-9 mt-8 max-w-xl">
+              I approach every project with curiosity and a willingness to
+              learn. Rather than chasing trends, I focus on understanding
+              fundamentals, writing clean and maintainable code, and improving
+              through consistent hands-on experience.
+            </p>
 
-              <p className="uppercase tracking-[4px] text-[#E66A1F] mb-5">
-                Current Focus
-              </p>
+            {/* Focus Areas */}
 
-              <h3 className="text-3xl font-bold">
-                MERN Stack · AI Applications · DSA
-              </h3>
+            <div className="grid grid-cols-2 gap-8 mt-14">
 
-              <p className="mt-6 text-neutral-300 leading-8">
-                Currently focused on building full-stack applications,
-                strengthening problem-solving skills, and exploring AI-driven
-                solutions that create meaningful user experiences.
-              </p>
+              <div>
+                <h3 className="text-2xl font-semibold text-black">
+                  Full Stack
+                </h3>
+                <p className="text-gray-500 mt-2 leading-7">
+                  Building complete web applications from frontend interfaces to
+                  backend systems.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-2xl font-semibold text-black">
+                  Artificial Intelligence
+                </h3>
+                <p className="text-gray-500 mt-2 leading-7">
+                  Exploring practical ways to integrate AI into modern software
+                  products.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-2xl font-semibold text-black">
+                  Problem Solving
+                </h3>
+                <p className="text-gray-500 mt-2 leading-7">
+                  Strengthening analytical thinking through Data Structures and
+                  Algorithms.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-2xl font-semibold text-black">
+                  Continuous Learning
+                </h3>
+                <p className="text-gray-500 mt-2 leading-7">
+                  Constantly learning, experimenting, and refining my approach
+                  to software engineering.
+                </p>
+              </div>
 
             </div>
 

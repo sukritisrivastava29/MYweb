@@ -36,16 +36,16 @@ function Contact() {
           <div className="mt-16 flex flex-col gap-8">
 
             <a
-              href="mailto:yourmail@gmail.com"
+              href="mailto:sukriti.srivastava2903@gmail.com"
               className="text-2xl md:text-3xl font-semibold hover:text-[#E66A1F] transition"
             >
-              yourmail@gmail.com
+            sukriti.srivastava2903@gmail.com
             </a>
 
             <div className="flex justify-center gap-10 uppercase tracking-[3px] text-sm">
 
               <a
-                href="https://github.com/yourusername"
+                href="https://github.com/sukritisrivastava29"
                 target="_blank"
                 rel="noreferrer"
                 className="hover:text-[#E66A1F] transition"
@@ -54,7 +54,7 @@ function Contact() {
               </a>
 
               <a
-                href="https://linkedin.com/in/yourusername"
+                href="https://www.linkedin.com/in/sukritisrivastava29/"
                 target="_blank"
                 rel="noreferrer"
                 className="hover:text-[#E66A1F] transition"

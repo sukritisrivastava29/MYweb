@@ -33,14 +33,14 @@ function Footer() {
           <div className="flex flex-wrap gap-8 mt-12 uppercase tracking-[3px] text-sm">
 
             <a
-              href="mailto:yourmail@gmail.com"
+              href="mailto:sukriti.srivastava2903@gmail.com"
               className="hover:text-[#E66A1F] transition"
             >
               Email
             </a>
 
             <a
-              href="https://github.com/yourusername"
+              href="https://github.com/sukritisrivastava29"
               target="_blank"
               rel="noreferrer"
               className="hover:text-[#E66A1F] transition"
@@ -49,7 +49,7 @@ function Footer() {
             </a>
 
             <a
-              href="https://linkedin.com/in/yourusername"
+              href="https://www.linkedin.com/in/sukritisrivastava29"
               target="_blank"
               rel="noreferrer"
               className="hover:text-[#E66A1F] transition"

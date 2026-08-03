@@ -2,25 +2,34 @@ import { motion } from "framer-motion";
 
 function Loader() {
   return (
-    <div className="fixed inset-0 z-[9999] bg-[#FAFAF8] flex items-center justify-center">
-
+    <motion.div
+      initial={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.6 }}
+      className="fixed inset-0 z-[9999] bg-[#FAFAF8] flex items-center justify-center"
+    >
       <div className="text-center">
 
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6 }}
+          className="uppercase tracking-[8px] text-[#E66A1F] text-sm font-semibold"
+        >
+          Portfolio
+        </motion.p>
+
         <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-5xl md:text-7xl font-bold tracking-tight"
+          initial={{ y: 40, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{
+            duration: 0.8,
+            ease: "easeOut",
+          }}
+          className="mt-5 text-6xl md:text-8xl font-bold tracking-tight"
         >
           SUKRITI.
         </motion.h1>
-
-        <motion.div
-          initial={{ width: 0 }}
-          animate={{ width: "180px" }}
-          transition={{ duration: 1.6 }}
-          className="h-[2px] bg-[#E66A1F] mx-auto mt-8"
-        />
 
         <motion.p
           initial={{ opacity: 0 }}
@@ -29,14 +38,23 @@ function Loader() {
             delay: 0.5,
             duration: 0.6,
           }}
-          className="mt-6 uppercase tracking-[6px] text-sm text-neutral-500"
+          className="mt-5 text-neutral-500 tracking-[4px] uppercase text-sm"
         >
-          Loading Portfolio
+          Software Engineer
         </motion.p>
 
-      </div>
+        <motion.div
+          initial={{ width: 0 }}
+          animate={{ width: 220 }}
+          transition={{
+            duration: 1.5,
+            ease: "easeInOut",
+          }}
+          className="h-[2px] bg-[#E66A1F] mx-auto mt-10"
+        />
 
-    </div>
+      </div>
+    </motion.div>
   );
 }
 

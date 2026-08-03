@@ -8,7 +8,7 @@ function Hero() {
     >
       <div className="w-full grid lg:grid-cols-2 gap-20 items-center">
 
-        {/* LEFT */}
+        
 
         <motion.div
           initial={{ opacity: 0, x: -60 }}
@@ -99,17 +99,11 @@ function Hero() {
 
               <div className="text-center">
 
-                <div className="text-7xl mb-4">
-                  💻
-                </div>
-
-                <h3 className="font-bold text-xl">
-                  YOUR
-                </h3>
-
-                <p className="uppercase tracking-[5px] text-sm mt-2">
-                  Illustration
-                </p>
+                <img
+  src="/illustrations/hero.png"
+  alt="Developer workspace"
+  className="w-full h-auto object-contain"
+/>
 
               </div>
 
