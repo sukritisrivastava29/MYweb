@@ -11,24 +11,18 @@ import Cursor from "./components/Cursor";
 function App() {
   return (
     <>
-    <Background />
-      <Cursor />
-      <Navbar />
+  <Navbar />
 
-      <Hero />
-
-      <About />
-
-      <Skills />
-
-      <Projects />
-      <Resume/>
-      
-
-      <Contact />
-
-      <Footer />
-    </>
+  <main className="pt-24">
+    <Hero />
+    <About />
+    <Projects />
+    <Skills />
+    <Resume />
+    <Contact />
+    <Footer />
+  </main>
+</>
   );
 }
 

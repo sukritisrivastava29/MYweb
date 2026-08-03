@@ -1,105 +1,72 @@
 import { motion } from "framer-motion";
 
-const skillCategories = [
+const skillGroups = [
   {
     title: "Frontend",
-    skills: [
-      "HTML5",
-      "CSS3",
-      "JavaScript",
-      "React.js",
-      "Tailwind CSS",
-      "Responsive Design",
-    ],
+    skills: ["React", "JavaScript", "Tailwind CSS", "HTML5", "CSS3"],
   },
   {
     title: "Backend",
-    skills: [
-      "Node.js",
-      "Express.js",
-      "REST APIs",
-      "JWT Authentication",
-      "MongoDB",
-      "Mongoose",
-    ],
+    skills: ["Node.js", "Express.js", "MongoDB", "REST APIs"],
   },
   {
     title: "Programming",
-    skills: [
-      "C++",
-      "Python",
-      "JavaScript",
-      "Data Structures",
-      "Algorithms",
-      "OOP",
-    ],
+    skills: ["C++", "Python", "JavaScript"],
   },
   {
-    title: "Tools & Technologies",
-    skills: [
-      "Git",
-      "GitHub",
-      "VS Code",
-      "Postman",
-      "Vite",
-      "Render",
-      "Vercel",
-    ],
+    title: "Tools",
+    skills: ["Git", "GitHub", "VS Code", "Postman", "Vercel"],
   },
 ];
 
 function Skills() {
   return (
-    <section
-      id="skills"
-      className="py-24 px-6 lg:px-16 bg-white"
-    >
-      <div className="max-w-7xl mx-auto">
+    <section id="skills" className="py-28 bg-[#141414] text-white">
+      <div className="max-w-[1300px] mx-auto px-6 lg:px-12">
 
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center"
         >
-          <p className="uppercase tracking-[5px] text-[#8b6b4a] font-medium">
-            Expertise
+          <p className="uppercase tracking-[5px] text-[#E66A1F] font-semibold">
+            Skills
           </p>
 
-          <h2 className="mt-3 text-4xl md:text-5xl font-bold text-[#2f241b]">
-            Skills & Technologies
+          <h2 className="mt-4 text-5xl md:text-7xl font-bold leading-none">
+            Technologies
+            <br />
+            I work with.
           </h2>
 
-          <p className="mt-5 max-w-2xl mx-auto text-[#6b6258] leading-8">
-            I enjoy building scalable web applications using modern technologies,
-            writing clean code, and continuously learning new tools.
+          <p className="mt-8 max-w-2xl text-lg leading-8 text-neutral-400">
+            I enjoy building modern, scalable web applications using the MERN
+            stack while continuously learning new technologies and best
+            practices.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8 mt-16">
+        <div className="mt-20 grid md:grid-cols-2 gap-12">
 
-          {skillCategories.map((category, index) => (
+          {skillGroups.map((group, index) => (
             <motion.div
-              key={category.title}
-              initial={{ opacity: 0, y: 30 }}
+              key={group.title}
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{
-                duration: 0.5,
-                delay: index * 0.15,
-              }}
-              className="bg-[#faf8f5] rounded-3xl p-8 shadow-md hover:shadow-xl transition"
+              transition={{ delay: index * 0.1 }}
+              className="border border-neutral-700 p-8"
             >
-              <h3 className="text-2xl font-semibold text-[#2f241b] mb-6">
-                {category.title}
+              <h3 className="text-3xl font-bold mb-8">
+                {group.title}
               </h3>
 
               <div className="flex flex-wrap gap-3">
-                {category.skills.map((skill) => (
+                {group.skills.map((skill) => (
                   <span
                     key={skill}
-                    className="px-4 py-2 rounded-full bg-[#ede4db] text-[#5b4634] text-sm font-medium hover:bg-[#8b6b4a] hover:text-white transition"
+                    className="border border-neutral-600 px-5 py-2 text-sm uppercase tracking-wider hover:bg-[#E66A1F] hover:border-[#E66A1F] transition duration-300"
                   >
                     {skill}
                   </span>

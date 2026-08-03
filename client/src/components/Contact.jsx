@@ -1,189 +1,89 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
-import axios from "axios";
 
 function Contact() {
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
-
-  const [loading, setLoading] = useState(false);
-
-  const handleChange = (e) => {
-    setForm({
-      ...form,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    try {
-      setLoading(true);
-
-      await axios.post("http://localhost:5000/api/contact", form);
-
-      alert("Message sent successfully!");
-
-      setForm({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
-      });
-    } catch (error) {
-      alert("Something went wrong.");
-    } finally {
-      setLoading(false);
-    }
-  };
-
   return (
     <section
       id="contact"
-      className="min-h-screen flex items-center px-6 py-24"
+      className="py-32 bg-[#141414] text-white"
     >
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 w-full">
-
+      <div className="max-w-[1300px] mx-auto px-6 lg:px-12">
 
         <motion.div
-          initial={{ opacity: 0, x: -60 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.7 }}
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="text-center"
         >
-          <p className="uppercase tracking-[5px] text-[#8b6b4a] mb-3">
+
+          <p className="uppercase tracking-[5px] text-[#E66A1F] font-semibold">
             Contact
           </p>
 
-          <h2 className="text-5xl font-bold text-[#2b2118]">
-            Let's build something amazing together.
+          <h2 className="mt-6 text-5xl md:text-7xl font-bold leading-none">
+            Let's create
+            <br />
+            something meaningful.
           </h2>
 
-          <p className="mt-6 text-[#5d5248] leading-8 text-lg">
-            Whether you have an opportunity, a project idea, or simply want to
-            connect, I'd love to hear from you.
+          <p className="mt-10 max-w-2xl mx-auto text-lg leading-9 text-neutral-300">
+            I'm currently looking for software engineering internships,
+            freelance opportunities, and exciting collaborations.
+            If you have an opportunity or simply want to connect,
+            I'd love to hear from you.
           </p>
 
-          <div className="mt-12 space-y-6">
+          <div className="mt-16 flex flex-col gap-8">
 
-            <div className="flex items-center gap-5">
-              <div className="w-14 h-14 rounded-xl bg-[#8b6b4a] text-white flex items-center justify-center">
-                <Mail />
-              </div>
+            <a
+              href="mailto:yourmail@gmail.com"
+              className="text-2xl md:text-3xl font-semibold hover:text-[#E66A1F] transition"
+            >
+              yourmail@gmail.com
+            </a>
 
-              <div>
-                <p className="font-semibold">Email</p>
-                <p className="text-[#6c6257]">
-                  yourmail@gmail.com
-                </p>
-              </div>
-            </div>
+            <div className="flex justify-center gap-10 uppercase tracking-[3px] text-sm">
 
-            <div className="flex items-center gap-5">
-              <div className="w-14 h-14 rounded-xl bg-[#8b6b4a] text-white flex items-center justify-center">
-                <Phone />
-              </div>
+              <a
+                href="https://github.com/yourusername"
+                target="_blank"
+                rel="noreferrer"
+                className="hover:text-[#E66A1F] transition"
+              >
+                GitHub
+              </a>
 
-              <div>
-                <p className="font-semibold">Phone</p>
-                <p className="text-[#6c6257]">
-                  +91 XXXXX XXXXX
-                </p>
-              </div>
-            </div>
+              <a
+                href="https://linkedin.com/in/yourusername"
+                target="_blank"
+                rel="noreferrer"
+                className="hover:text-[#E66A1F] transition"
+              >
+                LinkedIn
+              </a>
 
-            <div className="flex items-center gap-5">
-              <div className="w-14 h-14 rounded-xl bg-[#8b6b4a] text-white flex items-center justify-center">
-                <MapPin />
-              </div>
+              <a
+                href="/resume.pdf"
+                target="_blank"
+                rel="noreferrer"
+                className="hover:text-[#E66A1F] transition"
+              >
+                Resume
+              </a>
 
-              <div>
-                <p className="font-semibold">Location</p>
-                <p className="text-[#6c6257]">
-                  India
-                </p>
-              </div>
             </div>
 
           </div>
+
+          <div className="mt-20 border-t border-neutral-700 pt-12">
+
+            <p className="text-neutral-500 uppercase tracking-[4px] text-sm">
+              Available for Internships • Open to Collaboration • Remote Friendly
+            </p>
+
+          </div>
+
         </motion.div>
-
-        
-
-        <motion.form
-          onSubmit={handleSubmit}
-          initial={{ opacity: 0, x: 60 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: .7 }}
-          viewport={{ once: true }}
-          className="bg-white/70 backdrop-blur-xl rounded-3xl border border-[#d8c8b7] p-10 shadow-xl"
-        >
-
-          <div className="grid md:grid-cols-2 gap-5">
-
-            <input
-              type="text"
-              placeholder="Your Name"
-              name="name"
-              value={form.name}
-              onChange={handleChange}
-              required
-              className="border border-[#d7c8b8] rounded-xl px-5 py-4 outline-none focus:border-[#8b6b4a]"
-            />
-
-            <input
-              type="email"
-              placeholder="Email Address"
-              name="email"
-              value={form.email}
-              onChange={handleChange}
-              required
-              className="border border-[#d7c8b8] rounded-xl px-5 py-4 outline-none focus:border-[#8b6b4a]"
-            />
-
-          </div>
-
-          <input
-            type="text"
-            placeholder="Subject"
-            name="subject"
-            value={form.subject}
-            onChange={handleChange}
-            required
-            className="border border-[#d7c8b8] rounded-xl px-5 py-4 mt-5 w-full outline-none focus:border-[#8b6b4a]"
-          />
-
-          <textarea
-            rows="6"
-            placeholder="Write your message..."
-            name="message"
-            value={form.message}
-            onChange={handleChange}
-            required
-            className="border border-[#d7c8b8] rounded-xl px-5 py-4 mt-5 w-full resize-none outline-none focus:border-[#8b6b4a]"
-          />
-
-          <button
-            disabled={loading}
-            className="mt-8 w-full bg-[#8b6b4a] hover:bg-[#715236] transition text-white py-4 rounded-xl flex items-center justify-center gap-3 font-semibold"
-          >
-            {loading ? (
-              "Sending..."
-            ) : (
-              <>
-                Send Message
-                <Send size={18} />
-              </>
-            )}
-          </button>
-
-        </motion.form>
 
       </div>
     </section>

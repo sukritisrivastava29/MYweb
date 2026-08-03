@@ -3,154 +3,159 @@ import { motion } from "framer-motion";
 const projects = [
   {
     title: "FinanceOS",
+    subtitle: "AI Powered Personal Finance Platform",
     description:
-      "A full-stack personal finance tracker with secure authentication, expense management, analytics dashboard, receipt scanning, and AI-powered financial insights.",
-    tech: [
+      "A full-stack finance management application that helps users track expenses, visualize spending habits, scan receipts using OCR, generate reports, and gain AI-powered financial insights.",
+    image: "/financeos.png",
+    technologies: [
       "React",
       "Node.js",
       "Express",
       "MongoDB",
-      "Tailwind CSS",
+      "Tailwind",
     ],
-    image: "/projects/financeos.png",
-    github: "YOUR_GITHUB_LINK",
-    live: "YOUR_LIVE_LINK",
+    github: "https://github.com/yourusername/financeos",
+    live: "https://financeos.vercel.app",
+    dark: false,
   },
   {
-    title: "Triply AI",
+    title: "Triply",
+    subtitle: "AI Travel Planner",
     description:
-      "An AI-powered travel planner that creates personalized itineraries based on destination, budget, and travel preferences using the Gemini API.",
-    tech: [
+      "An AI-powered travel planner that creates personalized itineraries, recommends destinations, and helps users organize memorable trips.",
+    image: "/triply.png",
+    technologies: [
       "React",
-      "Tailwind CSS",
+      "Tailwind",
       "Gemini API",
+      "Firebase",
     ],
-    image: "/projects/triply.png",
-    github: "YOUR_GITHUB_LINK",
-    live: "YOUR_LIVE_LINK",
+    github: "https://github.com/yourusername/triply",
+    live: "https://triply.vercel.app",
+    dark: true,
   },
   {
     title: "Weather Dashboard",
+    subtitle: "Real-Time Weather Application",
     description:
-      "A responsive weather application that provides real-time weather conditions, forecasts, and location-based search using external APIs.",
-    tech: [
+      "A responsive weather dashboard providing current conditions, forecasts, and location-based weather updates through external APIs.",
+    image: "/weather.png",
+    technologies: [
       "React",
-      "JavaScript",
       "OpenWeather API",
-      "CSS",
+      "Tailwind",
     ],
-    image: "/projects/weather.png",
-    github: "YOUR_GITHUB_LINK",
-    live: "YOUR_LIVE_LINK",
+    github: "https://github.com/yourusername/weather-dashboard",
+    live: "https://weather.vercel.app",
+    dark: false,
   },
 ];
 
 function Projects() {
   return (
-    <section
-      id="projects"
-      className="py-24 px-6 lg:px-16 bg-[#faf8f5]"
-    >
-      <div className="max-w-7xl mx-auto">
-
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center"
+    <>
+      {projects.map((project, index) => (
+        <section
+          key={project.title}
+          id={index === 0 ? "projects" : ""}
+          className={`py-28 ${
+            project.dark ? "bg-[#141414] text-white" : "bg-[#FAFAF8]"
+          }`}
         >
-          <p className="uppercase tracking-[5px] text-[#8b6b4a] font-medium">
-            Portfolio
-          </p>
+          <div className="max-w-[1300px] mx-auto px-6 lg:px-12">
 
-          <h2 className="text-4xl md:text-5xl font-bold text-[#2f241b] mt-3">
-            Featured Projects
-          </h2>
-
-          <p className="mt-5 text-[#6b6258] max-w-2xl mx-auto leading-8">
-            A collection of projects showcasing my expertise in full-stack
-            development, AI integration, and creating modern web experiences.
-          </p>
-        </motion.div>
-
-        <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8 mt-16">
-
-          {projects.map((project, index) => (
-            <motion.div
-              key={project.title}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{
-                duration: 0.5,
-                delay: index * 0.2,
-              }}
-              className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+            <div
+              className={`grid lg:grid-cols-2 gap-20 items-center ${
+                index % 2 === 1 ? "lg:flex-row-reverse" : ""
+              }`}
             >
+              {/* Image */}
 
-              
-              <div className="h-56 bg-[#ece4dc] flex items-center justify-center">
+              <motion.div
+                initial={{ opacity: 0, x: -40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+              >
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover"
+                  className="rounded-xl border border-neutral-300 shadow-xl"
                 />
-              </div>
+              </motion.div>
 
-             
-              <div className="p-7">
+              {/* Content */}
 
-                <h3 className="text-2xl font-bold text-[#2f241b]">
+              <motion.div
+                initial={{ opacity: 0, x: 40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+              >
+                <p className="uppercase tracking-[5px] text-[#E66A1F] font-semibold">
+                  Featured Project
+                </p>
+
+                <h2 className="text-5xl font-bold mt-5">
                   {project.title}
+                </h2>
+
+                <h3 className="text-xl mt-4 text-[#E66A1F]">
+                  {project.subtitle}
                 </h3>
 
-                <p className="text-[#6b6258] mt-4 leading-7">
+                <p
+                  className={`mt-8 leading-8 text-lg ${
+                    project.dark ? "text-neutral-300" : "text-neutral-600"
+                  }`}
+                >
                   {project.description}
                 </p>
 
-                <div className="flex flex-wrap gap-2 mt-6">
-                  {project.tech.map((item) => (
+                <div className="flex flex-wrap gap-3 mt-10">
+                  {project.technologies.map((tech) => (
                     <span
-                      key={item}
-                      className="px-3 py-1 text-sm rounded-full bg-[#f3ece4] text-[#5d4735]"
+                      key={tech}
+                      className={`px-4 py-2 border rounded-full text-sm ${
+                        project.dark
+                          ? "border-neutral-600"
+                          : "border-neutral-400"
+                      }`}
                     >
-                      {item}
+                      {tech}
                     </span>
                   ))}
                 </div>
 
-                <div className="flex gap-4 mt-8">
-
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-1 text-center py-3 rounded-xl border border-[#8b6b4a] hover:bg-[#8b6b4a] hover:text-white transition"
-                  >
-                    GitHub
-                  </a>
+                <div className="flex gap-8 mt-12">
 
                   <a
                     href={project.live}
                     target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-1 text-center py-3 rounded-xl bg-[#8b6b4a] text-white hover:bg-[#6e5438] transition"
+                    rel="noreferrer"
+                    className="font-semibold hover:text-[#E66A1F] transition"
                   >
-                    Live Demo
+                    Live Demo →
+                  </a>
+
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="font-semibold hover:text-[#E66A1F] transition"
+                  >
+                    GitHub →
                   </a>
 
                 </div>
 
-              </div>
+              </motion.div>
+            </div>
 
-            </motion.div>
-          ))}
-
-        </div>
-
-      </div>
-    </section>
+          </div>
+        </section>
+      ))}
+    </>
   );
 }
 

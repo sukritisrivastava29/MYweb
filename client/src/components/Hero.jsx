@@ -6,39 +6,39 @@ function Hero() {
       id="home"
       className="min-h-screen flex items-center"
     >
-      <div className="grid lg:grid-cols-2 gap-20 items-center w-full">
+      <div className="w-full grid lg:grid-cols-2 gap-20 items-center">
 
         {/* LEFT */}
 
         <motion.div
-          initial={{ opacity:0, x:-60 }}
-          animate={{ opacity:1, x:0 }}
-          transition={{ duration:.8 }}
+          initial={{ opacity: 0, x: -60 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
         >
-
-          <p className="uppercase tracking-[6px] text-blue-400 font-semibold">
-            Full Stack Developer
+          <p className="section-subtitle">
+            SOFTWARE ENGINEER
           </p>
 
-          <h1 className="text-6xl lg:text-8xl font-extrabold mt-6 leading-tight">
-            Hi,
+          <h1 className="section-title">
+            Building
             <br />
-            I'm
-            <span className="gradient"> Sukriti.</span>
+            digital
+            <br />
+            experiences.
           </h1>
 
-          <p className="mt-8 text-slate-400 text-xl leading-9 max-w-xl">
-            I build scalable web applications using
-            React, Node.js, Express and MongoDB while
-            exploring AI-powered products and writing
-            clean, maintainable code.
+          <p className="section-text">
+            Hi, I'm <strong>Sukriti Srivastava</strong>, a Full Stack Developer
+            passionate about building scalable web applications with the MERN
+            stack while exploring AI-powered products and solving real-world
+            problems through clean, maintainable code.
           </p>
 
-          <div className="flex gap-5 mt-10">
+          <div className="flex flex-wrap gap-5 mt-12">
 
             <a
               href="#projects"
-              className="px-8 py-4 rounded-xl bg-blue-600 hover:bg-blue-700 transition"
+              className="primary-btn"
             >
               View Projects
             </a>
@@ -46,20 +46,29 @@ function Hero() {
             <a
               href="/resume.pdf"
               target="_blank"
-              className="px-8 py-4 rounded-xl border border-slate-700 hover:border-blue-500 hover:text-blue-400 transition"
+              rel="noreferrer"
+              className="secondary-btn"
             >
               Resume
             </a>
 
           </div>
 
-          <div className="flex gap-8 mt-12 text-slate-400">
+          <div className="flex gap-10 mt-16 text-sm uppercase tracking-[3px]">
 
-            <a href="https://github.com/yourusername">
+            <a
+              href="https://github.com/yourusername"
+              target="_blank"
+              rel="noreferrer"
+            >
               GitHub
             </a>
 
-            <a href="https://linkedin.com/in/yourusername">
+            <a
+              href="https://linkedin.com/in/yourusername"
+              target="_blank"
+              rel="noreferrer"
+            >
               LinkedIn
             </a>
 
@@ -68,63 +77,45 @@ function Hero() {
             </a>
 
           </div>
-
         </motion.div>
-
-
 
         {/* RIGHT */}
 
         <motion.div
-          initial={{ opacity:0, x:60 }}
-          animate={{ opacity:1, x:0 }}
-          transition={{ duration:.9 }}
+          initial={{ opacity: 0, x: 60 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          className="flex justify-center"
         >
+          <div className="relative">
 
-          <div className="glass rounded-3xl p-8 shadow-2xl">
+            {/* Accent circle */}
 
-            <div className="flex gap-2 mb-6">
+            <div className="absolute -top-6 -left-6 w-full h-full border-2 border-[#E66A1F] rounded-full"></div>
 
-              <div className="w-3 h-3 rounded-full bg-red-500"></div>
-              <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
-              <div className="w-3 h-3 rounded-full bg-green-500"></div>
+            {/* Main illustration */}
+
+            <div className="w-[420px] h-[420px] rounded-full border-2 border-[#111] bg-white flex items-center justify-center">
+
+              <div className="text-center">
+
+                <div className="text-7xl mb-4">
+                  💻
+                </div>
+
+                <h3 className="font-bold text-xl">
+                  YOUR
+                </h3>
+
+                <p className="uppercase tracking-[5px] text-sm mt-2">
+                  Illustration
+                </p>
+
+              </div>
 
             </div>
 
-            <p className="text-slate-500 mb-6">
-              developer.js
-            </p>
-
-<pre className="text-sm lg:text-base leading-9 overflow-x-auto">
-{`const developer = {
-
-  name: "Sukriti",
-
-  role: "MERN Developer",
-
-  skills: [
-    "React",
-    "Node.js",
-    "Express",
-    "MongoDB",
-    "JavaScript"
-  ],
-
-  currentlyLearning: [
-    "RAG",
-    "System Design"
-  ],
-
-  leetcode: "50+ Problems",
-
-  status: "Open to Internship"
-};
-
-developer.buildAmazingThings();`}
-</pre>
-
           </div>
-
         </motion.div>
 
       </div>
