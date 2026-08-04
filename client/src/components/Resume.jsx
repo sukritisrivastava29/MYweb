@@ -72,7 +72,7 @@ function Resume() {
                 href="/resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 bg-black text-white px-8 py-4 rounded-full hover:bg-orange-500 transition duration-300"
+                className="flex items-center gap-3 border border-black px-8 py-4 rounded-full hover:bg-orange-500 transition duration-300"
               >
                 <FiExternalLink size={18} />
                 View Resume
@@ -81,7 +81,7 @@ function Resume() {
               <a
                 href="/resume.pdf"
                 download
-                className="flex items-center gap-3 border border-black px-8 py-4 rounded-full hover:bg-black hover:text-white transition duration-300"
+                className="flex items-center gap-3 border border-black px-8 py-4 rounded-full hover:bg-orange-500 transition duration-300"
               >
                 <FiDownload size={18} />
                 Download
@@ -91,7 +91,7 @@ function Resume() {
 
           </motion.div>
 
-          {/* Illustration */}
+          
 
           <motion.div
             initial={{ opacity: 0, x: 60 }}
@@ -101,7 +101,7 @@ function Resume() {
             className="relative flex justify-center items-center"
           >
 
-            {/* Decorative Orange Dots */}
+            
 
             <span className="absolute top-10 left-8 w-3 h-3 rounded-full bg-orange-500"></span>
 
