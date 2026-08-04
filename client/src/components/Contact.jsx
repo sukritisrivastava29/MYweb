@@ -1,93 +1,148 @@
 import { motion } from "framer-motion";
+import { Mail, ArrowUpRight } from "lucide-react";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
-function Contact() {
+const Contact = () => {
   return (
     <section
       id="contact"
-      className="py-32 bg-[#141414] text-white"
+      className="min-h-screen bg-[#111111] flex items-center py-24 overflow-hidden"
     >
-      <div className="max-w-[1300px] mx-auto px-6 lg:px-12">
+      <div className="max-w-7xl mx-auto px-8 lg:px-16 w-full">
+        <div className="grid lg:grid-cols-2 gap-20 items-center">
 
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-          className="text-center"
-        >
+          {/* Left Content */}
 
-          <p className="uppercase tracking-[5px] text-[#E66A1F] font-semibold">
-            Contact
-          </p>
+          <motion.div
+            initial={{ opacity: 0, x: -60 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <p className="uppercase tracking-[6px] text-orange-500 text-sm mb-4">
+              Contact
+            </p>
 
-          <h2 className="mt-6 text-5xl md:text-7xl font-bold leading-none">
-            Let's create
-            <br />
-            something meaningful.
-          </h2>
+            <h2 className="text-5xl lg:text-7xl font-black leading-none text-white">
+              Let's Create
+              <br />
+              What's Next.
+            </h2>
 
-          <p className="mt-10 max-w-2xl mx-auto text-lg leading-9 text-neutral-300">
-            I'm currently looking for software engineering internships,
-            freelance opportunities, and exciting collaborations.
-            If you have an opportunity or simply want to connect,
-            I'd love to hear from you.
-          </p>
+            <div className="w-24 h-[2px] bg-orange-500 my-8"></div>
 
-          <div className="mt-16 flex flex-col gap-8">
+            <p className="text-gray-300 text-lg leading-9 max-w-xl">
+              I'm always interested in meaningful work, ambitious ideas,
+              and conversations that lead to thoughtful products.
+              Whether you're building something new, exploring
+              collaborations, or simply exchanging ideas, I'd be glad
+              to connect.
+            </p>
 
-            <a
-              href="mailto:sukriti.srivastava2903@gmail.com"
-              className="text-2xl md:text-3xl font-semibold hover:text-[#E66A1F] transition"
-            >
-            sukriti.srivastava2903@gmail.com
-            </a>
+            <div className="mt-12 space-y-6">
 
-            <div className="flex justify-center gap-10 uppercase tracking-[3px] text-sm">
+            
+
+              <a
+                href="mailto:your@email.com"
+                className="group flex items-center justify-between border-b border-neutral-800 pb-4 hover:border-orange-500 transition-all"
+              >
+                <div className="flex items-center gap-4">
+                  <Mail
+                    size={20}
+                    className="text-orange-500"
+                  />
+
+                  <span className="text-gray-200">
+                   sukriti.srivastava2903@gmail.com
+                  </span>
+                </div>
+
+                <ArrowUpRight
+                  size={18}
+                  className="text-gray-500 group-hover:text-orange-500 transition"
+                />
+              </a>
+
+              
 
               <a
                 href="https://github.com/sukritisrivastava29"
                 target="_blank"
-                rel="noreferrer"
-                className="hover:text-[#E66A1F] transition"
+                rel="noopener noreferrer"
+                className="group flex items-center justify-between border-b border-neutral-800 pb-4 hover:border-orange-500 transition-all"
               >
-                GitHub
+                <div className="flex items-center gap-4">
+                  <FaGithub
+                    size={20}
+                    className="text-orange-500"
+                  />
+
+                  <span className="text-gray-200">
+                    GitHub
+                  </span>
+                </div>
+
+                <ArrowUpRight
+                  size={18}
+                  className="text-gray-500 group-hover:text-orange-500 transition"
+                />
               </a>
+
+            
 
               <a
                 href="https://www.linkedin.com/in/sukritisrivastava29/"
                 target="_blank"
-                rel="noreferrer"
-                className="hover:text-[#E66A1F] transition"
+                rel="noopener noreferrer"
+                className="group flex items-center justify-between border-b border-neutral-800 pb-4 hover:border-orange-500 transition-all"
               >
-                LinkedIn
-              </a>
+                <div className="flex items-center gap-4">
+                  <FaLinkedin
+                    size={20}
+                    className="text-orange-500"
+                  />
 
-              <a
-                href="/resume.pdf"
-                target="_blank"
-                rel="noreferrer"
-                className="hover:text-[#E66A1F] transition"
-              >
-                Resume
+                  <span className="text-gray-200">
+                    LinkedIn
+                  </span>
+                </div>
+
+                <ArrowUpRight
+                  size={18}
+                  className="text-gray-500 group-hover:text-orange-500 transition"
+                />
               </a>
 
             </div>
+          </motion.div>
 
-          </div>
+          {/* Right Illustration */}
 
-          <div className="mt-20 border-t border-neutral-700 pt-12">
+          <motion.div
+            initial={{ opacity: 0, x: 60 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="relative flex justify-center"
+          >
+            {/* Orange Accent Dots */}
 
-            <p className="text-neutral-500 uppercase tracking-[4px] text-sm">
-              Available for Internships • Open to Collaboration • Remote Friendly
-            </p>
+            <span className="absolute top-8 left-8 w-3 h-3 rounded-full bg-orange-500"></span>
+            <span className="absolute bottom-12 right-8 w-2 h-2 rounded-full bg-orange-500"></span>
+            <span className="absolute top-1/3 right-0 w-4 h-4 rounded-full bg-orange-500"></span>
 
-          </div>
+            <img
+              src="/illustrations/contact.png"
+              alt="Contact Illustration"
+              className="w-full max-w-[520px] object-contain"
+            />
+          </motion.div>
 
-        </motion.div>
-
+        </div>
       </div>
     </section>
   );
-}
+};
 
 export default Contact;
