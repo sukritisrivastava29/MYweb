@@ -1,28 +1,27 @@
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import About from "./components/About";
-import Skills from "./components/Skills";
-import Projects from "./components/Projects";
-import Resume from "./components/Resume";
-import Contact from "./components/Contact";
+import { Routes, Route } from "react-router-dom";
 
-import Background from "./components/Background";
-import Cursor from "./components/Cursor";
+import Navbar from "./components/Navbar";
+
+import Home from "./pages/Home";
+import FinanceOS from "./pages/FinanceOS";
+// Later:
+// import Triply from "./pages/Triply";
+// import Weather from "./pages/Weather";
+
 function App() {
   return (
     <>
-  <Navbar />
+      <Navbar />
 
-  <main className="pt-24">
-    <Hero />
-    <About />
-    <Projects />
-    <Skills />
-    <Resume />
-    <Contact />
-   
-  </main>
-</>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/projects/financeos" element={<FinanceOS />} />
+
+        {/* Later */}
+        {/* <Route path="/projects/triply" element={<Triply />} /> */}
+        {/* <Route path="/projects/weather" element={<Weather />} /> */}
+      </Routes>
+    </>
   );
 }
 
