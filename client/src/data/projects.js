@@ -7,24 +7,41 @@ export const projects = [
     title: "FinanceOS",
     subtitle: "AI-Powered Personal Finance Platform",
 
+    year: "2026",
+    role: "Full Stack Developer",
+    duration: "3 Weeks",
+    status: "Live",
+
     description:
       "A full-stack MERN finance platform featuring expense tracking, analytics, OCR receipt scanning, AI-powered insights, PDF reports, and secure authentication.",
 
-    image: "/financeos.png",
+    coverImage: "/projects/financeos/cover.png",
+
+    gallery: [
+      "/projects/financeos/dashboard.png",
+      "/projects/financeos/analytics.png",
+      "/projects/financeos/transactions.png",
+      "/projects/financeos/receipt-scanner.png",
+      "/projects/financeos/ai-chat.png",
+      "/projects/financeos/mobile.png",
+    ],
 
     technologies: [
       "React",
       "Node.js",
       "Express",
       "MongoDB",
-      "Tailwind",
-      "Gemini",
+      "Tailwind CSS",
+      "Gemini API",
+      "JWT",
+      "Recharts",
+      "Tesseract OCR",
     ],
 
     highlights: [
       "OCR Receipt Scanner",
-      "AI Insights",
-      "Analytics Dashboard",
+      "AI Financial Insights",
+      "Expense Analytics",
       "JWT Authentication",
     ],
 
@@ -38,26 +55,37 @@ export const projects = [
     number: "02",
 
     title: "Triply",
-
     subtitle: "AI Travel Planner",
+
+    year: "2026",
+    role: "Frontend Developer",
+    duration: "1 Week",
+    status: "Live",
 
     description:
       "Generate personalized travel itineraries using AI, discover destinations, and plan memorable journeys with an intuitive interface.",
 
-    image: "/triply.png",
+    coverImage: "/projects/triply/cover.png",
+
+    gallery: [
+      "/projects/triply/home.png",
+      "/projects/triply/itinerary.png",
+      "/projects/triply/destinations.png",
+      "/projects/triply/mobile.png",
+    ],
 
     technologies: [
       "React",
-      "Tailwind",
+      "Tailwind CSS",
       "Firebase",
       "Gemini API",
     ],
 
     highlights: [
-      "AI Itineraries",
-      "Responsive UI",
+      "AI Itinerary Generator",
+      "Destination Discovery",
+      "Responsive Design",
       "Authentication",
-      "Travel Planner",
     ],
 
     github: "https://github.com/sukritisrivastava29/Triply",
@@ -70,25 +98,36 @@ export const projects = [
     number: "03",
 
     title: "Weather Dashboard",
-
     subtitle: "Real-Time Weather Application",
 
-    description:
-      "Responsive weather dashboard with live forecasts, location search and beautiful visualizations powered by OpenWeather API.",
+    year: "2026",
+    role: "Frontend Developer",
+    duration: "3 Days",
+    status: "Live",
 
-    image: "/weather.png",
+    description:
+      "Responsive weather dashboard with live forecasts, location search, and beautiful visualizations powered by the OpenWeather API.",
+
+    coverImage: "/projects/weather/cover.png",
+
+    gallery: [
+      "/projects/weather/dashboard.png",
+      "/projects/weather/forecast.png",
+      "/projects/weather/search.png",
+      "/projects/weather/mobile.png",
+    ],
 
     technologies: [
       "React",
-      "Tailwind",
+      "Tailwind CSS",
       "OpenWeather API",
     ],
 
     highlights: [
+      "Live Weather",
       "Forecasts",
       "Location Search",
-      "Responsive",
-      "API Integration",
+      "Responsive UI",
     ],
 
     github:
