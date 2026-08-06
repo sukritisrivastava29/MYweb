@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
-import { Link } from "react-router-dom";
 
 import Button from "../ui/Button";
 import Badge from "../ui/Badge";
@@ -20,10 +19,9 @@ export default function ProjectCard({
         reverse ? "lg:[&>*:first-child]:order-2" : ""
       }`}
     >
+      {/* Browser Mockup */}
       <motion.div
-        whileHover={{
-          y: -8,
-        }}
+        whileHover={{ y: -8 }}
         className="group"
       >
         <div className="overflow-hidden rounded-3xl border border-neutral-200 bg-white shadow-[0_30px_80px_rgba(0,0,0,0.08)]">
@@ -34,13 +32,14 @@ export default function ProjectCard({
           </div>
 
           <img
-            src={project.image}
+            src={project.coverImage}
             alt={project.title}
-            className="transition duration-700 group-hover:scale-105"
+            className="w-full h-auto object-cover transition duration-700 group-hover:scale-105"
           />
         </div>
       </motion.div>
 
+      {/* Content */}
       <div>
         <p className="text-[120px] font-black leading-none text-neutral-200">
           {project.number}
@@ -53,7 +52,7 @@ export default function ProjectCard({
         )}
 
         <h3 className="text-5xl font-black">
-          {project.title}.
+          {project.title}
         </h3>
 
         <p className="mt-3 text-xl text-orange-500">
@@ -84,23 +83,14 @@ export default function ProjectCard({
         <div className="mt-12 flex flex-wrap gap-4">
           <Button to={`/projects/${project.id}`}>
             View Case Study
-            <ArrowUpRight
-              className="ml-2"
-              size={18}
-            />
+            <ArrowUpRight className="ml-2" size={18} />
           </Button>
 
-          <Button
-            href={project.live}
-            variant="secondary"
-          >
+          <Button href={project.live} variant="secondary">
             Live Demo
           </Button>
 
-          <Button
-            href={project.github}
-            variant="secondary"
-          >
+          <Button href={project.github} variant="secondary">
             GitHub
           </Button>
         </div>
