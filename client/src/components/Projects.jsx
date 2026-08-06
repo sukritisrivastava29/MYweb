@@ -74,7 +74,7 @@ export default function Projects() {
   solve real problems.
 </h2>
 
-          <div className="w-24 h-[2px] bg-orange-500 mt-8"></div>
+          <div className="w-24 h-0.5 bg-orange-500 mt-8"></div>
         </motion.div>
 
         {projects.map((project, index) => (
