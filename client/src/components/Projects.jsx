@@ -1,5 +1,5 @@
 import { projects } from "../data/projects";
-
+console.log(projects);
 import Container from "./ui/Container";
 import SectionTitle from "./ui/SectionTitle";
 import Reveal from "./ui/Reveal";
