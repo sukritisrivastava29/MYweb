@@ -69,14 +69,50 @@ export const projects = [
       },
     ],
 
-    gallery: [
-      "/projects/financeos/dashboard.png",
-      "/projects/financeos/analytics.png",
-      "/projects/financeos/transactions.png",
-      "/projects/financeos/receipt-scanner.png",
-      "/projects/financeos/ai-chat.png",
-      "/projects/financeos/mobile.png",
-    ],
+  gallery: [
+  {
+    title: "Financial Dashboard",
+    description:
+      "Monitor income, expenses, savings, and recent transactions from a clean dashboard designed to provide an instant overview of your financial health.",
+    image: "/projects/financeos/dashboard.png",
+  },
+  {
+    title: "Expense Analytics",
+    description:
+      "Interactive charts built with Recharts visualize monthly trends and category-wise spending, helping users better understand their finances.",
+    image: "/projects/financeos/analytics.png",
+  },
+  {
+    title: "Transaction Management",
+    description:
+      "Search, filter, edit, and organize every transaction through a fast and intuitive interface.",
+    image: "/projects/financeos/transactions.png",
+  },
+  {
+    title: "Receipt Scanner",
+    description:
+      "Upload receipts and automatically extract merchant, amount, date, and category using Tesseract OCR, eliminating manual entry.",
+    image: "/projects/financeos/receipt-scanner.png",
+  },
+  {
+    title: "AI Financial Assistant",
+    description:
+      "Gemini AI analyzes spending patterns, answers financial questions, and delivers personalized budgeting recommendations in real time.",
+    image: "/projects/financeos/ai-chat.png",
+  },
+  {
+    title: "PDF Report Export",
+    description:
+      "Generate professional financial reports containing transaction summaries, analytics, and visual insights that can be downloaded instantly.",
+    image: "/projects/financeos/pdf-report.png",
+  },
+  {
+    title: "Responsive Mobile Experience",
+    description:
+      "Every screen is fully responsive, providing a seamless experience across desktop, tablet, and mobile devices.",
+    image: "/projects/financeos/mobile.png",
+  },
+],
 
     techStack: {
       frontend: ["React", "Tailwind CSS"],
