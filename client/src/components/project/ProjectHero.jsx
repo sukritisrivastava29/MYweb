@@ -1,89 +1,106 @@
-import { ArrowLeft, Calendar, Clock3, ExternalLink } from "lucide-react";
-import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import {
+  Calendar,
+  Clock3,
+  User,
+  CheckCircle2,
+  ArrowUpRight,
+} from "lucide-react";
+
+import Container from "../ui/Container";
+import Button from "../ui/Button";
+import Badge from "../ui/Badge";
 
 export default function ProjectHero({ project }) {
-  return (
-    <section className="pt-32 pb-20 bg-[#FAFAF8]">
-      <div className="mx-auto max-w-7xl px-6">
-        <Link
-          to="/"
-          className="inline-flex items-center gap-2 text-sm text-neutral-500 transition hover:text-black"
-        >
-          <ArrowLeft size={18} />
-          Back to Portfolio
-        </Link>
+  const { hero, links } = project;
 
-        <div className="mt-12 grid items-center gap-16 lg:grid-cols-[0.9fr_1.1fr]">
-          {/* Left */}
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-orange-500">
-              Project
+  return (
+    <section className="relative overflow-hidden border-b border-neutral-200 bg-[#FAFAF8] pt-32 pb-24">
+      <Container>
+        <div className="grid items-center gap-20 lg:grid-cols-[1fr_1.1fr]">
+          {/* LEFT */}
+          <motion.div
+            initial={{ opacity: 0, x: -40 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7 }}
+          >
+            {hero.featured && (
+              <div className="mb-6">
+                <Badge>Featured Project</Badge>
+              </div>
+            )}
+
+            <p className="text-sm font-semibold uppercase tracking-[0.35em] text-orange-500">
+              Case Study
             </p>
 
-            <h1 className="mt-4 text-6xl font-black tracking-tight text-neutral-900">
-              {project.title}
+            <h1 className="mt-5 text-6xl font-black tracking-tight text-neutral-900">
+              {hero.title}
             </h1>
 
             <p className="mt-4 text-2xl font-medium text-orange-500">
-              {project.subtitle}
+              {hero.subtitle}
             </p>
 
-            <p className="mt-8 max-w-xl text-lg leading-8 text-neutral-600">
-              {project.description}
+            <p className="mt-8 max-w-xl text-lg leading-9 text-neutral-600">
+              {hero.description}
             </p>
 
-            <div className="mt-10 flex flex-wrap gap-3">
-              {project.technologies.map((tech) => (
-                <span
-                  key={tech}
-                  className="rounded-full border border-neutral-200 bg-white px-4 py-2 text-sm font-medium text-neutral-700"
-                >
-                  {tech}
-                </span>
-              ))}
+            <div className="mt-12 grid grid-cols-2 gap-6">
+              <div className="flex items-center gap-3">
+                <Calendar className="text-orange-500" size={20} />
+                <div>
+                  <p className="text-sm text-neutral-500">Year</p>
+                  <p className="font-semibold">{hero.year}</p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <Clock3 className="text-orange-500" size={20} />
+                <div>
+                  <p className="text-sm text-neutral-500">Duration</p>
+                  <p className="font-semibold">{hero.duration}</p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <User className="text-orange-500" size={20} />
+                <div>
+                  <p className="text-sm text-neutral-500">Role</p>
+                  <p className="font-semibold">{hero.role}</p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <CheckCircle2 className="text-orange-500" size={20} />
+                <div>
+                  <p className="text-sm text-neutral-500">Status</p>
+                  <p className="font-semibold">{hero.status}</p>
+                </div>
+              </div>
             </div>
 
-            <div className="mt-10 flex flex-wrap gap-8 text-sm text-neutral-600">
-              <div className="flex items-center gap-2">
-                <Calendar size={18} />
-                <span>{project.year}</span>
-              </div>
-
-              <div className="flex items-center gap-2">
-                <Clock3 size={18} />
-                <span>{project.duration}</span>
-              </div>
-
-              <div>
-                <span className="font-medium">{project.role}</span>
-              </div>
-            </div>
-
-            <div className="mt-10 flex flex-wrap gap-4">
-              <a
-                href={project.live}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center rounded-full bg-orange-500 px-6 py-3 font-semibold text-white transition hover:bg-orange-600"
-              >
+            <div className="mt-12 flex flex-wrap gap-4">
+              <Button href={links.live}>
                 Live Demo
-                <ExternalLink size={18} className="ml-2" />
-              </a>
+                <ArrowUpRight size={18} className="ml-2" />
+              </Button>
 
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center rounded-full border border-neutral-300 bg-white px-6 py-3 font-semibold text-neutral-900 transition hover:bg-neutral-100"
-              >
+              <Button href={links.github} variant="secondary">
                 GitHub
-              </a>
+              </Button>
             </div>
-          </div>
+          </motion.div>
 
-          {/* Right */}
-          <div className="group">
-            <div className="overflow-hidden rounded-3xl border border-neutral-200 bg-white shadow-[0_30px_80px_rgba(0,0,0,0.08)]">
+          {/* RIGHT */}
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            whileHover={{ y: -8 }}
+            className="group"
+          >
+            <div className="overflow-hidden rounded-3xl border border-neutral-200 bg-white shadow-[0_25px_80px_rgba(0,0,0,0.08)]">
               <div className="flex items-center gap-2 border-b border-neutral-200 bg-neutral-100 px-5 py-4">
                 <div className="h-3 w-3 rounded-full bg-red-400" />
                 <div className="h-3 w-3 rounded-full bg-yellow-400" />
@@ -91,14 +108,14 @@ export default function ProjectHero({ project }) {
               </div>
 
               <img
-                src={project.coverImage}
-                alt={project.title}
-                className="w-full transition duration-700 group-hover:scale-105"
+                src={hero.coverImage}
+                alt={hero.title}
+                className="block w-full transition-transform duration-700 group-hover:scale-105"
               />
             </div>
-          </div>
+          </motion.div>
         </div>
-      </div>
+      </Container>
     </section>
   );
 }
