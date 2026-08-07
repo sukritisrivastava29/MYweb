@@ -31,7 +31,7 @@ export default function Projects() {
           >
             <ProjectCard
               project={project}
-              reverse={index % 2 !== 0}
+              reverse={false}
             />
           </Reveal>
         ))}
