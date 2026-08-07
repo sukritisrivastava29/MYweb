@@ -129,25 +129,46 @@ export const projects = [
     },
 
     challenges: [
-      {
-        title: "Receipt OCR",
+  {
+    title: "Extracting Reliable Data from Receipts",
 
-        problem:
-          "Receipt layouts vary significantly, making text extraction inconsistent.",
+    problem:
+      "Receipts come in different layouts, fonts, lighting conditions, and image qualities. Raw OCR output was often inconsistent, making it difficult to accurately identify merchants, amounts, and transaction dates.",
 
-        solution:
-          "Implemented image preprocessing and OCR to improve extraction accuracy before processing the data.",
-      },
-      {
-        title: "AI Integration",
+    solution:
+      "Used Tesseract OCR for text extraction and added post-processing logic to clean the output, validate values, and map extracted text into a structured transaction format before saving it to the database.",
+  },
 
-        problem:
-          "Financial responses needed to remain relevant to the user's transaction history.",
+  {
+    title: "Providing Useful AI Responses",
 
-        solution:
-          "Structured prompts using user transaction data so Gemini could generate personalised financial insights.",
-      },
-    ],
+    problem:
+      "A general AI model can generate generic financial advice that isn't relevant to a user's actual spending habits.",
+
+    solution:
+      "Constructed prompts using the user's transaction history and spending summaries so Gemini could generate personalized insights instead of generic responses.",
+  },
+
+  {
+    title: "Keeping Financial Data Secure",
+
+    problem:
+      "Financial applications require secure authentication and protected API endpoints to prevent unauthorized access to sensitive user information.",
+
+    solution:
+      "Implemented JWT-based authentication, protected backend routes with middleware, and ensured each request only accessed data belonging to the authenticated user.",
+  },
+
+  {
+    title: "Building Responsive Analytics",
+
+    problem:
+      "Charts and dashboards needed to remain readable and responsive across desktops, tablets, and mobile devices while handling changing datasets.",
+
+    solution:
+      "Designed reusable chart components with Recharts, optimized layouts using Tailwind CSS, and ensured visualizations adapted smoothly to different screen sizes.",
+  },
+],
 
     learnings: [
       "Designing scalable REST APIs.",
