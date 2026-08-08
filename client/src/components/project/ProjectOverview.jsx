@@ -11,10 +11,10 @@ export default function ProjectOverview({ project }) {
   const { hero, overview, techStack } = project;
 
   return (
-    <section className="border-t border-neutral-200 bg-white py-28">
+    <section className="bg-white py-24">
       <Container>
-        <div className="grid gap-20 lg:grid-cols-[1.2fr_0.8fr]">
-          {/* Left */}
+        <div className="grid gap-16 lg:grid-cols-[1.5fr_0.8fr] lg:items-start">
+          
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-orange-500">
               Overview
@@ -36,7 +36,7 @@ export default function ProjectOverview({ project }) {
             </div>
           </div>
 
-          {/* Right */}
+        
           <div className="sticky top-28 h-fit rounded-3xl border border-neutral-200 bg-[#FAFAF8] p-8">
             <h3 className="text-xl font-bold text-neutral-900">
               Project Details
@@ -46,14 +46,11 @@ export default function ProjectOverview({ project }) {
               <div className="flex items-start gap-4">
                 <Calendar
                   size={20}
-                  className="mt-1 text-orange-500"
+                  className="mt-1 shrink-0 text-orange-500"
                 />
 
                 <div>
-                  <p className="text-sm text-neutral-500">
-                    Year
-                  </p>
-
+                  <p className="text-sm text-neutral-500">Year</p>
                   <p className="font-semibold text-neutral-900">
                     {hero.year}
                   </p>
@@ -63,14 +60,11 @@ export default function ProjectOverview({ project }) {
               <div className="flex items-start gap-4">
                 <Clock3
                   size={20}
-                  className="mt-1 text-orange-500"
+                  className="mt-1 shrink-0 text-orange-500"
                 />
 
                 <div>
-                  <p className="text-sm text-neutral-500">
-                    Duration
-                  </p>
-
+                  <p className="text-sm text-neutral-500">Duration</p>
                   <p className="font-semibold text-neutral-900">
                     {hero.duration}
                   </p>
@@ -80,14 +74,11 @@ export default function ProjectOverview({ project }) {
               <div className="flex items-start gap-4">
                 <User
                   size={20}
-                  className="mt-1 text-orange-500"
+                  className="mt-1 shrink-0 text-orange-500"
                 />
 
                 <div>
-                  <p className="text-sm text-neutral-500">
-                    Role
-                  </p>
-
+                  <p className="text-sm text-neutral-500">Role</p>
                   <p className="font-semibold text-neutral-900">
                     {hero.role}
                   </p>
@@ -97,14 +88,11 @@ export default function ProjectOverview({ project }) {
               <div className="flex items-start gap-4">
                 <CheckCircle2
                   size={20}
-                  className="mt-1 text-orange-500"
+                  className="mt-1 shrink-0 text-orange-500"
                 />
 
                 <div>
-                  <p className="text-sm text-neutral-500">
-                    Status
-                  </p>
-
+                  <p className="text-sm text-neutral-500">Status</p>
                   <p className="font-semibold text-neutral-900">
                     {hero.status}
                   </p>

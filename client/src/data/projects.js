@@ -223,13 +223,38 @@ export const projects = [
     solution: {},
 
     features: [],
-
-    gallery: [
-      "/projects/triply/home.png",
-      "/projects/triply/itinerary.png",
-      "/projects/triply/destinations.png",
-      "/projects/triply/mobile.png",
-    ],
+gallery: [
+  {
+    image: "/projects/triply/cover.png",
+    title: "Triply",
+    description:
+      "A modern travel planning platform that helps users discover destinations and create personalized trips.",
+  },
+  {
+    image: "/projects/triply/ai-planner.png",
+    title: "AI Trip Planner",
+    description:
+      "Generate personalized travel itineraries using Gemini AI based on your destination, budget, duration, and travel style.",
+  },
+  {
+    image: "/projects/triply/explore.png",
+    title: "Explore Destinations",
+    description:
+      "Discover destinations through a clean and intuitive interface designed to make travel inspiration effortless.",
+  },
+  {
+    image: "/projects/triply/packages.png",
+    title: "Travel Packages",
+    description:
+      "Browse curated travel packages and explore different options for planning your next trip.",
+  },
+  {
+    image: "/projects/triply/login.png",
+    title: "Authentication",
+    description:
+      "A simple authentication experience that gives users a seamless way to access their personalized travel planning.",
+  },
+],
 
     techStack: {
       frontend: ["React", "Tailwind CSS"],
