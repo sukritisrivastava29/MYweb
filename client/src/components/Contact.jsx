@@ -23,11 +23,14 @@ const Contact = () => {
               Contact
             </p>
 
-            <h2 className="text-5xl lg:text-7xl font-black leading-none text-white">
-              Let's Create
-              <br />
-              What's Next.
-            </h2>
+            <h2
+  className="text-5xl lg:text-7xl font-black leading-none"
+  style={{ color: "#ffffff" }}
+>
+  Let's create
+  <br />
+  what's Next
+</h2>
 
             <div className="w-24 h-[2px] bg-orange-500 my-8"></div>
 
@@ -42,7 +45,6 @@ const Contact = () => {
             <div className="mt-12 space-y-6">
 
             
-
               <a
                 href="mailto:your@email.com"
                 className="group flex items-center justify-between border-b border-neutral-800 pb-4 hover:border-orange-500 transition-all"
@@ -63,8 +65,6 @@ const Contact = () => {
                   className="text-gray-500 group-hover:text-orange-500 transition"
                 />
               </a>
-
-              
 
               <a
                 href="https://github.com/sukritisrivastava29"

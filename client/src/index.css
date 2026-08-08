@@ -121,11 +121,34 @@ section {
 
 
 
+/* Dark sections */
 .dark-section {
   background: #141414;
   color: #ffffff;
 }
 
+.dark-section h1,
+.dark-section h2,
+.dark-section h3,
+.dark-section h4,
+.dark-section h5,
+.dark-section h6 {
+  color: #ffffff !important;
+}
+
+.dark-section p {
+  color: #bdbdbd !important;
+}
+
+.dark-section span {
+  color: inherit;
+}
+
+
+.dark-section .accent,
+.dark-section .text-orange-500 {
+  color: #e66a1f !important;
+}
 .dark-section p {
   color: #bdbdbd;
 }

@@ -45,11 +45,14 @@ function About() {
               About
             </p>
 
-            <h2 className="text-5xl lg:text-7xl font-black leading-none text-white">
-              Building.
-              <br />
-              Learning.
-            </h2>
+           <h2
+  className="text-5xl lg:text-7xl font-black leading-none"
+  style={{ color: "#ffffff" }}
+>
+  Building.
+  <br />
+  Learning.
+</h2>
 
             <div className="w-24 h-[2px] bg-orange-500 my-8"></div>
 

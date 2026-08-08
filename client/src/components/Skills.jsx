@@ -34,11 +34,14 @@ const Skills = () => {
               Skills
             </p>
 
-            <h2 className="text-5xl lg:text-7xl font-black leading-none text-white">
-              Built on
-              <br />
-              Strong Foundations.
-            </h2>
+            <h2
+  className="text-5xl lg:text-7xl font-black leading-none"
+  style={{ color: "#ffffff" }}
+>
+  Built on
+  <br />
+  Strong Foundations.
+</h2>
 
             <div className="w-24 h-[2px] bg-orange-500 my-8"></div>
 
