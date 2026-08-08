@@ -121,8 +121,8 @@ export const projects = [
     },
 
     links: {
-      live: "https://your-triply-live-link.com",
-      github: "https://github.com/yourusername/triply",
+      live: "https://triply-fawn.vercel.app/",
+      github: "https://github.com/sukritisrivastava29/Triply",
     },
 
     overview: {
@@ -213,8 +213,8 @@ export const projects = [
     },
 
     links: {
-      live: "https://your-weather-live-link.com",
-      github: "https://github.com/yourusername/weather",
+      live: "https://weather-dashboard-nu-rosy.vercel.app/",
+      github: "https://github.com/sukritisrivastava29/weather_dashboard",
     },
 
     overview: {
