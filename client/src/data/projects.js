@@ -8,7 +8,7 @@ export const projects = [
       description:
         "A full-stack personal finance platform designed to help users track expenses, understand spending patterns, and make smarter financial decisions.",
       year: "2026",
-      duration: "3 Months",
+      duration: "3 weeks",
       role: "Full Stack Developer",
       status: "Completed",
       featured: true,
@@ -16,8 +16,8 @@ export const projects = [
     },
 
     links: {
-      live: "https://your-financeos-live-link.com",
-      github: "https://github.com/yourusername/financeos",
+      live: "https://finance-os-two-gilt.vercel.app/",
+      github: "https://github.com/sukritisrivastava29/Finance-OS",
     },
 
     overview: {
@@ -113,7 +113,7 @@ export const projects = [
       description:
         "An AI-powered travel planning application that helps users create personalized itineraries based on their destination, preferences, and travel requirements.",
       year: "2026",
-      duration: "2 Months",
+      duration: "2 weeks",
       role: "Frontend Developer",
       status: "Completed",
       featured: false,
@@ -205,7 +205,7 @@ export const projects = [
       description:
         "A responsive weather dashboard that provides current conditions, forecasts, and detailed weather insights for any searched location.",
       year: "2026",
-      duration: "1 Month",
+      duration: "1 week",
       role: "Frontend Developer",
       status: "Completed",
       featured: false,

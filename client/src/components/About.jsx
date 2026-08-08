@@ -52,6 +52,8 @@ function About() {
   Building.
   <br />
   Learning.
+   <br />
+   Improving.
 </h2>
 
             <div className="w-24 h-[2px] bg-orange-500 my-8"></div>
@@ -64,10 +66,7 @@ function About() {
             </p>
 
             <p className="text-gray-300 text-lg leading-9 mt-8 max-w-xl">
-              I approach every project with curiosity and a willingness to
-              learn. Rather than chasing trends, I focus on understanding
-              fundamentals, writing clean and maintainable code, and improving
-              through consistent hands-on experience.
+             From designing interfaces to building APIs and integrating AI features, I like working across the stack and understanding how everything fits together. I'm constantly learning, experimenting, and turning ideas into working products.
             </p>
 
             
