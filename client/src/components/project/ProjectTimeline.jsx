@@ -63,7 +63,7 @@ export default function ProjectTimeline({ project }) {
           </p>
         </div>
 
-        <div className="relative mx-auto mt-16 max-w-5xl">
+        <div className="relative mt-16 w-full">
           <div className="absolute left-6 top-0 h-full w-px bg-neutral-300" />
 
           <div className="space-y-12">
