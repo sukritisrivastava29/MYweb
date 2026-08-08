@@ -8,15 +8,14 @@ function Hero() {
     >
       <div className="w-full grid lg:grid-cols-2 gap-20 items-center">
 
-        
-
+    
         <motion.div
           initial={{ opacity: 0, x: -60 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
           <p className="section-subtitle">
-            SOFTWARE ENGINEER
+           FULL STACK · AI · BUILDER
           </p>
 
           <h1 className="section-title">
@@ -57,7 +56,7 @@ function Hero() {
           <div className="flex gap-10 mt-16 text-sm uppercase tracking-[3px]">
 
             <a
-              href="https://github.com/yourusername"
+              href="https://github.com/sukritisrivastava29"
               target="_blank"
               rel="noreferrer"
             >
@@ -65,21 +64,21 @@ function Hero() {
             </a>
 
             <a
-              href="https://linkedin.com/in/yourusername"
+              href="https://www.linkedin.com/in/sukritisrivastava29/"
               target="_blank"
               rel="noreferrer"
             >
               LinkedIn
             </a>
 
-            <a href="mailto:youremail@gmail.com">
+            <a href="mailto:sukriti.srivastava2903@gmail.com">
               Email
             </a>
 
           </div>
         </motion.div>
 
-        {/* RIGHT */}
+       
 
         <motion.div
           initial={{ opacity: 0, x: 60 }}
@@ -89,11 +88,11 @@ function Hero() {
         >
           <div className="relative">
 
-            {/* Accent circle */}
+           
 
             <div className="absolute -top-6 -left-6 w-full h-full border-2 border-[#E66A1F] rounded-full"></div>
 
-            {/* Main illustration */}
+           
 
             <div className="w-[420px] h-[420px] rounded-full border-2 border-[#111] bg-white flex items-center justify-center">
 
