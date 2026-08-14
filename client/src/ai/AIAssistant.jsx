@@ -84,7 +84,7 @@ const getResponse = (message) => {
         {
           label: "Open LinkedIn",
           href: PORTFOLIO_LINKS.linkedin,
-          icon: Linkedin,
+         icon: ArrowUpRight,
         },
       ],
     };
@@ -93,8 +93,7 @@ const getResponse = (message) => {
 
   if (
     text.includes("github") ||
-    text.includes("git hub") ||
-    text.includes("code")
+    text.includes("git hub") 
   ) {
     return {
       text: "You can explore Sukriti's GitHub to see her projects and source code.",
@@ -102,7 +101,7 @@ const getResponse = (message) => {
         {
           label: "Open GitHub",
           href: PORTFOLIO_LINKS.github,
-          icon: Github,
+         icon: ArrowUpRight,
         },
       ],
     };
@@ -126,7 +125,6 @@ const getResponse = (message) => {
     };
   }
 
- 
   if (
     text.includes("strongest project") ||
     text.includes("best project") ||
