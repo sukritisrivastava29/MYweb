@@ -4,7 +4,7 @@ import Projects from "../components/Projects";
 import Skills from "../components/Skills";
 import Resume from "../components/Resume";
 import Contact from "../components/Contact";
-
+import AISection from "../components/ai/AISection";
 export default function Home() {
   return (
     <main className="pt-24">
@@ -14,12 +14,16 @@ export default function Home() {
         <About />
       </div>
 
+ <div id="skills">
+        <Skills />
+      </div>
+      
       <div id="projects">
         <Projects />
       </div>
 
-      <div id="skills">
-        <Skills />
+      <div id="ai section">
+        <AISection />
       </div>
 
       <div id="resume">

@@ -1,8 +1,11 @@
+import { useState } from "react";
 import { Sparkles, ArrowUpRight } from "lucide-react";
 import Container from "../ui/Container";
 import SectionTitle from "../ui/SectionTitle";
 import Reveal from "../ui/Reveal";
 import AIWorkflow from "./AIWorkflow";
+import AIAssistant from "../../ai/AIAssistant";
+import AIButton from "../../ai/AIButton";
 
 const aiFeatures = [
   {
@@ -44,108 +47,84 @@ const aiProjects = [
 ];
 
 export default function AISection() {
+  const [isAIOpen, setIsAIOpen] = useState(false);
+
   return (
-    <section id="ai" className="bg-[#FAFAF8] py-28">
-      <Container>
-        {/* Header */}
-        <Reveal>
-          <div className="flex items-center gap-3">
-            <span className="h-2 w-2 rounded-full bg-orange-500" />
+    <>
+      <section id="ai" className="bg-[#FAFAF8] py-28">
+        <Container>
+          
+          <Reveal>
+            <div className="flex items-center gap-3">
+              <span className="h-2 w-2 rounded-full bg-orange-500" />
 
-            <p className="text-xs uppercase tracking-[0.2em] text-neutral-400">
-              AI Integration
-            </p>
-          </div>
-        </Reveal>
+              <p className="text-xs uppercase tracking-[0.2em] text-neutral-400">
+                AI Integration
+              </p>
+            </div>
+          </Reveal>
 
-        <Reveal delay={0.1}>
-          <div className="mt-6 max-w-4xl">
-            <h2 className="text-4xl font-medium tracking-tight text-neutral-900 md:text-6xl">
-              Building with AI,
-              <br />
-              not just talking about it.
-            </h2>
+          <Reveal delay={0.1}>
+            <div className="mt-6 max-w-4xl">
+              <h2 className="text-4xl font-medium tracking-tight text-neutral-900 md:text-6xl">
+                Building with AI,
+                <br />
+                not just talking about it.
+              </h2>
 
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-neutral-600">
-              I integrate AI into full-stack applications to create
-              smarter, more personalized, and more useful digital
-              experiences.
-            </p>
-          </div>
-        </Reveal>
+              <p className="mt-6 max-w-2xl text-lg leading-8 text-neutral-600">
+                I integrate AI into full-stack applications to create
+                smarter, more personalized, and more useful digital
+                experiences.
+              </p>
+            </div>
+          </Reveal>
 
-        {/* AI Features */}
-        <div className="mt-20 grid gap-12 md:grid-cols-3">
-          {aiFeatures.map((feature, index) => (
-            <Reveal key={feature.number} delay={index * 0.1}>
-              <div className="group border-t border-neutral-300 pt-6">
-                <div className="flex items-center justify-between">
-                  <span className="text-xs text-neutral-400">
-                    {feature.number}
-                  </span>
-
-                  <ArrowUpRight
-                    size={20}
+     
+          <Reveal delay={0.15}>
+            <div className="mt-12 flex flex-col justify-between gap-6 rounded-2xl border border-neutral-200 bg-white p-6 md:flex-row md:items-center md:p-8">
+              <div>
+                <div className="flex items-center gap-2">
+                  <Sparkles
+                    size={18}
                     strokeWidth={1.5}
-                    className="text-neutral-400 transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1"
+                    className="text-orange-500"
                   />
+
+                  <p className="text-xs uppercase tracking-[0.18em] text-neutral-400">
+                    Meet my AI
+                  </p>
                 </div>
 
-                <h3 className="mt-8 text-2xl font-medium tracking-tight text-neutral-900">
-                  {feature.title}
+                <h3 className="mt-3 text-2xl font-medium tracking-tight text-neutral-900">
+                  Curious about my work?
                 </h3>
 
-                <p className="mt-4 max-w-md text-base leading-7 text-neutral-600">
-                  {feature.description}
+                <p className="mt-2 max-w-xl text-sm leading-6 text-neutral-600">
+                  Ask my AI assistant about my projects, technical skills,
+                  experience, or how I built my applications.
                 </p>
-
-                <div className="mt-6 flex flex-wrap gap-2">
-                  {feature.technologies.map((technology) => (
-                    <span
-                      key={technology}
-                      className="rounded-full border border-neutral-300 px-3 py-1 text-xs text-neutral-600"
-                    >
-                      {technology}
-                    </span>
-                  ))}
-                </div>
               </div>
-            </Reveal>
-          ))}
-        </div>
 
-        {/* Workflow */}
-        <AIWorkflow />
-
-        {/* AI Projects */}
-        <Reveal delay={0.2}>
-          <div className="mt-28 border-t border-neutral-300 pt-10">
-            <p className="text-xs uppercase tracking-[0.2em] text-neutral-400">
-              AI in my projects
-            </p>
-
-            <div className="mt-4 flex flex-col justify-between gap-4 md:flex-row md:items-end">
-              <h3 className="text-3xl font-medium tracking-tight text-neutral-900 md:text-4xl">
-                Real applications. Real use cases.
-              </h3>
-
-              <Sparkles
-                size={28}
-                strokeWidth={1.2}
-                className="text-neutral-400"
-              />
+              <button
+                type="button"
+                onClick={() => setIsAIOpen(true)}
+                className="inline-flex shrink-0 items-center justify-center gap-2 rounded-full bg-neutral-900 px-5 py-3 text-sm font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-neutral-700"
+              >
+                Ask AI
+                <ArrowUpRight size={16} strokeWidth={1.5} />
+              </button>
             </div>
+          </Reveal>
 
-            <div className="mt-12 grid gap-8 md:grid-cols-2">
-              {aiProjects.map((project) => (
-                <div
-                  key={project.title}
-                  className="group rounded-2xl border border-neutral-200 bg-white p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
-                >
-                  <div className="flex items-start justify-between gap-4">
-                    <h4 className="text-2xl font-medium tracking-tight text-neutral-900">
-                      {project.title}
-                    </h4>
+          <div className="mt-20 grid gap-12 md:grid-cols-3">
+            {aiFeatures.map((feature, index) => (
+              <Reveal key={feature.number} delay={index * 0.1}>
+                <div className="group border-t border-neutral-300 pt-6">
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs text-neutral-400">
+                      {feature.number}
+                    </span>
 
                     <ArrowUpRight
                       size={20}
@@ -154,26 +133,99 @@ export default function AISection() {
                     />
                   </div>
 
-                  <p className="mt-4 max-w-lg leading-7 text-neutral-600">
-                    {project.description}
+                  <h3 className="mt-8 text-2xl font-medium tracking-tight text-neutral-900">
+                    {feature.title}
+                  </h3>
+
+                  <p className="mt-4 max-w-md text-base leading-7 text-neutral-600">
+                    {feature.description}
                   </p>
 
                   <div className="mt-6 flex flex-wrap gap-2">
-                    {project.technologies.map((technology) => (
+                    {feature.technologies.map((technology) => (
                       <span
                         key={technology}
-                        className="rounded-full bg-neutral-100 px-3 py-1 text-xs text-neutral-600"
+                        className="rounded-full border border-neutral-300 px-3 py-1 text-xs text-neutral-600"
                       >
                         {technology}
                       </span>
                     ))}
                   </div>
                 </div>
-              ))}
-            </div>
+              </Reveal>
+            ))}
           </div>
-        </Reveal>
-      </Container>
-    </section>
+
+          <AIWorkflow />
+
+        
+          <Reveal delay={0.2}>
+            <div className="mt-28 border-t border-neutral-300 pt-10">
+              <p className="text-xs uppercase tracking-[0.2em] text-neutral-400">
+                AI in my projects
+              </p>
+
+              <div className="mt-4 flex flex-col justify-between gap-4 md:flex-row md:items-end">
+                <h3 className="text-3xl font-medium tracking-tight text-neutral-900 md:text-4xl">
+                  Real applications. Real use cases.
+                </h3>
+
+                <Sparkles
+                  size={28}
+                  strokeWidth={1.2}
+                  className="text-neutral-400"
+                />
+              </div>
+
+              <div className="mt-12 grid gap-8 md:grid-cols-2">
+                {aiProjects.map((project) => (
+                  <div
+                    key={project.title}
+                    className="group rounded-2xl border border-neutral-200 bg-white p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+                  >
+                    <div className="flex items-start justify-between gap-4">
+                      <h4 className="text-2xl font-medium tracking-tight text-neutral-900">
+                        {project.title}
+                      </h4>
+
+                      <ArrowUpRight
+                        size={20}
+                        strokeWidth={1.5}
+                        className="text-neutral-400 transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1"
+                      />
+                    </div>
+
+                    <p className="mt-4 max-w-lg leading-7 text-neutral-600">
+                      {project.description}
+                    </p>
+
+                    <div className="mt-6 flex flex-wrap gap-2">
+                      {project.technologies.map((technology) => (
+                        <span
+                          key={technology}
+                          className="rounded-full bg-neutral-100 px-3 py-1 text-xs text-neutral-600"
+                        >
+                          {technology}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </Reveal>
+        </Container>
+      </section>
+
+      <AIButton
+        isOpen={isAIOpen}
+        onClick={() => setIsAIOpen(true)}
+      />
+
+      <AIAssistant
+        isOpen={isAIOpen}
+        onClose={() => setIsAIOpen(false)}
+      />
+    </>
   );
 }
