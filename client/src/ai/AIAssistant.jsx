@@ -9,16 +9,14 @@ import {
 } from "lucide-react";
 
 
-
 const PORTFOLIO_LINKS = {
   github: "https://github.com/sukritisrivastava29",
   linkedin: "https://www.linkedin.com/in/sukritisrivastava29/",
+  leetcode: "https://leetcode.com/u/sukritisrv9/",
   resume: "#resume",
   projects: "#projects",
   contact: "#contact",
 };
-
-
 
 const suggestedPrompts = [
   "What is Sukriti's strongest project?",
@@ -90,7 +88,23 @@ const getResponse = (message) => {
     };
   }
 
-
+if (
+  text.includes("leetcode") ||
+  text.includes("leet code") ||
+  text.includes("dsa") ||
+  text.includes("coding profile")
+) {
+  return {
+    text: "You can explore Sukriti's LeetCode profile to see her problem-solving practice and DSA work.",
+    links: [
+      {
+        label: "Open LeetCode",
+        href: PORTFOLIO_LINKS.leetcode,
+        icon: ArrowUpRight,
+      },
+    ],
+  };
+}
   if (
     text.includes("github") ||
     text.includes("git hub") 
@@ -106,7 +120,22 @@ const getResponse = (message) => {
       ],
     };
   }
-
+  
+if (
+  text.includes("projects") ||
+  text.includes("project")
+) {
+  return {
+    text: "Sukriti has worked on projects ranging from foundational React and API applications to larger full-stack and AI-powered products. Her main projects include FinanceOS and Triply.",
+    links: [
+      {
+        label: "View Projects",
+        href: PORTFOLIO_LINKS.projects,
+        icon: ArrowUpRight,
+      },
+    ],
+  };
+}
   if (
     text.includes("resume") ||
     text.includes("cv") ||
