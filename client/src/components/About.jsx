@@ -73,7 +73,7 @@ function About() {
             <div className="grid grid-cols-2 gap-8 mt-14">
 
               <div>
-                <h3 className="text-2xl font-semibold text-white">
+               <h3 className="text-2xl font-semibold !text-white">
                   Full Stack
                 </h3>
                 <p className="text-gray-300 mt-2 leading-7">
@@ -83,7 +83,7 @@ function About() {
               </div>
 
               <div>
-                <h3 className="text-2xl font-semibold text-white">
+               <h3 className="text-2xl font-semibold !text-white">
                   Artificial Intelligence
                 </h3>
                 <p className="text-gray-300 mt-2 leading-7">
@@ -93,7 +93,7 @@ function About() {
               </div>
 
               <div>
-               <h3 className="text-2xl font-semibold text-white">
+               <h3 className="text-2xl font-semibold !text-white">
                   Problem Solving
                 </h3>
                 <p className="text-gray-300 mt-2 leading-7">
@@ -103,7 +103,7 @@ function About() {
               </div>
 
               <div>
-                <h3 className="text-2xl font-semibold text-white">
+                <h3 className="text-2xl font-semibold !text-white">
                   Continuous Learning
                 </h3>
                 <p className="text-gray-300 mt-2 leading-7">
