@@ -46,7 +46,7 @@ const Contact = () => {
 
             
               <a
-                href="mailto:your@email.com"
+                href="sukriti.srivastava2903@gmail.com"
                 className="group flex items-center justify-between border-b border-neutral-800 pb-4 hover:border-orange-500 transition-all"
               >
                 <div className="flex items-center gap-4">
