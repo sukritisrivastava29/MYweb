@@ -11,7 +11,6 @@ const Contact = () => {
       <div className="max-w-7xl mx-auto px-8 lg:px-16 w-full">
         <div className="grid lg:grid-cols-2 gap-20 items-center">
 
-          {/* Left Content */}
 
           <motion.div
             initial={{ opacity: 0, x: -60 }}
@@ -24,13 +23,13 @@ const Contact = () => {
             </p>
 
             <h2
-  className="text-5xl lg:text-7xl font-black leading-none"
-  style={{ color: "#ffffff" }}
->
-  Let's create
-  <br />
-  what's Next
-</h2>
+              className="text-5xl lg:text-7xl font-black leading-none"
+              style={{ color: "#ffffff" }}
+            >
+              Let's create
+              <br />
+              what's Next
+            </h2>
 
             <div className="w-24 h-[2px] bg-orange-500 my-8"></div>
 
@@ -44,28 +43,30 @@ const Contact = () => {
 
             <div className="mt-12 space-y-6">
 
-            
-              <a
-                href="sukriti.srivastava2903@gmail.com"
-                className="group flex items-center justify-between border-b border-neutral-800 pb-4 hover:border-orange-500 transition-all"
-              >
-                <div className="flex items-center gap-4">
-                  <Mail
-                    size={20}
-                    className="text-orange-500"
-                  />
+          <a
+  href="https://mail.google.com/mail/?view=cm&fs=1&to=sukriti.srivastava2903@gmail.com"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="group flex items-center justify-between border-b border-neutral-800 pb-4 hover:border-orange-500 transition-all"
+>
+  <div className="flex items-center gap-4">
+    <Mail
+      size={20}
+      className="text-orange-500"
+    />
 
-                  <span className="text-gray-200">
-                   sukriti.srivastava2903@gmail.com
-                  </span>
-                </div>
+    <span className="text-gray-200">
+      sukriti.srivastava2903@gmail.com
+    </span>
+  </div>
 
-                <ArrowUpRight
-                  size={18}
-                  className="text-gray-500 group-hover:text-orange-500 transition"
-                />
-              </a>
+  <ArrowUpRight
+    size={18}
+    className="text-gray-500 group-hover:text-orange-500 transition"
+  />
+</a>
 
+           
               <a
                 href="https://github.com/sukritisrivastava29"
                 target="_blank"
@@ -89,8 +90,7 @@ const Contact = () => {
                 />
               </a>
 
-            
-
+           
               <a
                 href="https://www.linkedin.com/in/sukritisrivastava29/"
                 target="_blank"
@@ -117,7 +117,7 @@ const Contact = () => {
             </div>
           </motion.div>
 
-          {/* Right Illustration */}
+       
 
           <motion.div
             initial={{ opacity: 0, x: 60 }}
@@ -126,10 +126,11 @@ const Contact = () => {
             viewport={{ once: true }}
             className="relative flex justify-center"
           >
-            {/* Orange Accent Dots */}
-
+         
             <span className="absolute top-8 left-8 w-3 h-3 rounded-full bg-orange-500"></span>
+
             <span className="absolute bottom-12 right-8 w-2 h-2 rounded-full bg-orange-500"></span>
+
             <span className="absolute top-1/3 right-0 w-4 h-4 rounded-full bg-orange-500"></span>
 
             <img
