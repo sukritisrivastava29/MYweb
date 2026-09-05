@@ -1,127 +1,95 @@
-# Personal Portfolio
+# Hi, I'm Sukriti Srivastava 👋
 
-A modern, responsive personal portfolio website built to showcase my projects, technical skills, experience, and journey as a Full Stack Web Developer.
+### Full Stack Developer | React.js | Node.js | AI Enthusiast
 
-## ✨ Features
+I'm a B.Tech ECE student and aspiring Full Stack Developer passionate about building practical, user-focused web applications.
 
-* Responsive design across desktop, tablet, and mobile
-* Modern and minimal UI
-* Smooth scroll and reveal animations
-* Dedicated projects showcase
-* Project details and image galleries
-* Skills and technology section
-* About and experience sections
-* Resume section
-* Contact section
-* Dark/light theme support
-* Interactive UI elements and animations
+I enjoy turning ideas into functional products — from responsive React interfaces and REST APIs to AI-powered features and full-stack applications.
+
+---
+
+## 🚀 About Me
+
+- 🎓 B.Tech in Electronics & Communication Engineering
+- 💻 Currently focused on **Full Stack Web Development**
+- ⚛️ Building applications with **React.js, Node.js & Express**
+- 🤖 Exploring **AI integration and AI-powered applications**
+- 🧠 Practicing **DSA and problem solving**
+- 🎯 Currently preparing for software development internships and placements
+- 📍 India
+
+---
 
 ## 🛠️ Tech Stack
 
-**Frontend**
+### Frontend
+`HTML` `CSS` `JavaScript` `React.js` `Tailwind CSS`
 
-* React.js
-* Vite
-* Tailwind CSS
-* Framer Motion
-* Lucide React
+### Backend
+`Node.js` `Express.js` `REST APIs`
 
-**Development**
+### Database
+`MongoDB`
 
-* JavaScript
-* HTML5
-* CSS3
-* Git & GitHub
+### Programming
+`C` `C++` `Python` `JavaScript`
 
-## 📂 Project Structure
+### Tools & Platforms
+`Git` `GitHub` `Vite` `Postman` `Vercel` `Render`
 
-```text
-portfolio/
-├── public/
-│   ├── images/
-│   └── assets/
-│
-├── src/
-│   ├── components/
-│   │   ├── layout/
-│   │   ├── sections/
-│   │   └── ui/
-│   │
-│   ├── data/
-│   ├── pages/
-│   ├── assets/
-│   ├── App.jsx
-│   ├── main.jsx
-│   └── index.css
-│
-├── package.json
-├── vite.config.js
-└── README.md
-```
+### AI
+`Gemini API` `AI Integration` `OCR`
 
-## 🚀 Getting Started
-
-### 1. Clone the repository
-
-```bash
-git clone <your-repository-url>
-cd portfolio
-```
-
-### 2. Install dependencies
-
-```bash
-npm install
-```
-
-### 3. Start the development server
-
-```bash
-npm run dev
-```
-
-The application will be available at the local development URL provided by Vite.
-
-### 4. Build for production
-
-```bash
-npm run build
-```
+---
 
 ## 📌 Featured Projects
 
-### FinanceOS
+### 💰 FinanceOS
 
-A full-stack personal finance management platform with expense tracking, analytics, receipt scanning, PDF reports, and AI-powered financial assistance.
+A full-stack personal finance management platform.
 
-**Stack:** React, Node.js, Express, MongoDB, Tailwind CSS
+**Features:**
+- Expense & transaction tracking
+- Interactive financial dashboards
+- Analytics and visualizations
+- Receipt scanning using OCR
+- AI-powered financial assistant
+- PDF report generation
 
-### Triply
+**Tech:** React.js • Node.js • Express.js • MongoDB • Gemini API • Tesseract OCR
 
-An AI-powered travel planning application that generates personalized travel plans using AI.
+---
 
-**Stack:** React, Tailwind CSS, Gemini API
+### ✈️ Triply
 
-### Weather Dashboard
+An AI-powered travel planning application that helps users create personalized travel plans.
 
-A responsive weather application providing real-time weather information using the OpenWeather API.
+**Tech:** React.js • Tailwind CSS • Gemini API
 
-**Stack:** React, Tailwind CSS, OpenWeather API
+---
 
-## 🎯 Purpose
+### 🐾 PawCare
 
-This portfolio was built to present my work, technical abilities, and development journey in a simple and interactive way while continuously improving my skills in modern web development.
+A platform designed to help pet owners find animal-care providers, veterinary services, emergency support, rescuers and animal welfare organizations.
 
-## 📬 Contact
+**Tech:** React.js • JavaScript • CSS • React Router
 
-I'm open to opportunities, collaborations, internships, and interesting projects.
+---
 
-* **Portfolio:** <your-portfolio-url>
-* **GitHub:** <your-github-url>
-* **LinkedIn:** <your-linkedin-url>
-* **Email:** <your-email>
+### 🌦️ Weather Dashboard
 
-## 📄 License
+A responsive weather application providing real-time weather information using an external weather API.
 
-This project is open source and available under the MIT License.
+**Tech:** React.js • Tailwind CSS • OpenWeather API
 
+---
+
+## 📊 What I'm Currently Working On
+
+```text
+✓ React & Frontend Development
+✓ Node.js & Backend Development
+✓ Full Stack Projects
+✓ AI-powered applications
+✓ Data Structures & Algorithms
+→ Internship & Placement Preparation
